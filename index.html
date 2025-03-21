@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hari Babu C H - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background: #111;
+            color: #fff;
+            text-align: center;
+        }
+        header {
+            background: #222;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+        }
+        .menu-icon {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .hero {
+            margin-top: 80px;
+            padding: 50px;
+        }
+        .hero img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+        }
+        section {
+            padding: 50px 20px;
+        }
+        .skills, .projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        .skills div, .projects div {
+            background: #333;
+            padding: 15px;
+            border-radius: 10px;
+            width: 120px;
+        }
+        .contact input, .contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .contact button {
+            background: #ff6600;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+         /* Projects Section */
+         .projects {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .project-card {
+            background-color:white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 300px;
+            transition: transform 0.3s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card h3 {
+            color: #4CAF50;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            font-size: 14px;
+            color: #777;
+        }
+
+        .project-card a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .project-card a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background: #222;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+            .menu-icon {
+                display: block;
+            }
+            nav {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background: #222;
+                text-align: center;
+            }
+            nav.active {
+                display: flex;
+            }
+            .skills, .projects {
+                flex-direction: column;
+                align-items: center;
+            }
+            .skills div, .projects div {
+                width: 90%;
+            }
+        }
+        .cv-button {
+    display: inline-block;
+    padding: 12px 24px;
+    border: 2px solid white;
+    color: #66fcf1;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.cv-button:hover {
+    background-color: #66fcf1;
+    color: rgb(3, 169, 252);
+}
+    </style>
+</head>
+<body>
+<header>
+    <h2>Hari Babu C H</h2>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <img src="https://media.licdn.com/dms/image/v2/D5603AQHPV3HgZbeBMQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1728284875680?e=1747872000&v=beta&t=AY2_3uTaiYcesrVPCQbcj6dZuxILisUoA8CNFObGUZY" alt="Profile Photo">
+    <h1>Hello, I'm Hari Babu C H</h1>
+    <p>Student at Patrician College</p>
+</section>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p> Hi! I'm hari babu c h , a passionate student at Patrician College, exploring the world of web development and coding. 
+        I enjoy building creative and functional websites using modern technologies.</p>
+</section>
+<div class="cv-download">
+    <a href="https://drive.google.com/file/d/1EXtxTYXqPw39wrBVQTtMQo468PV6agoc/view?usp=drive_link" download class="cv-button">Download CV</a>
+</div>
+
+<section id="skills">
+    <h2>My Skills</h2>
+    <div class="skills">
+        <div>HTML</div>
+        <div>CSS</div>
+        <div>JavaScript</div>
+        <div>Git</div>
+        <div>GitHub</div>
+        <div>SQL</div>
+    </div>
+</section>
+
+
+<!-- Projects Section -->
+<section id="projects">
+    <div class="container">
+        <h3 style="color: #151a15;">Projects</h3>
+        <div class="projects">
+            <div class="project-card">
+                <h2>Project 1</h2>
+                <p>A to-do list app built with React and Firebase for real-time updates.</p>
+                <a href="#" target="_blank">View Project</a>
+            </div>
+            <div class="project-card">
+                <h2>Project 2</h2>
+                <p>A weather app that uses an API to fetch live weather data.</p>
+                <a href="#" target="_blank">View Project</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:haribabuc458@gmail.com">haribabuc458@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/haribabuc458" target="_blank">GitHub</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/hari-babu-c-h-6a682a284/" target="_blank">LinkedIn</a></p>
+</section>
+
+<footer>
+    <p>© 2025 Hari Babu C H. All rights reserved.</p>
+</footer>
+
+<script>
+    function toggleMenu() {
+        const nav = document.querySelector("nav");
+        nav.classList.toggle("active");
+    }
+</script>
+
+</body>
+</html>
